@@ -41,7 +41,7 @@ namespace ThreadStackInfo
             new Thread(WriteAllocatedStackSize, 1024 * 4096).StartAndJoin("   4 MB Stack Size");
             new Thread(WriteAllocatedStackSize, 1024 * 8192).StartAndJoin("   8 MB Stack Size");
 
-            Task.Factory.StartNew(() => WriteAllocatedStackSize("Task Default stack size"));
+            Task.Factory.StartNew(() => WriteAllocatedStackSize("  Task stack size"));
             Console.ReadKey();
         }
     }
